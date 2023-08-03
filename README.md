@@ -9,7 +9,7 @@ Ghafari et al.: Reconstructing the evolutionary history of human, simian, and pr
 
 `pol_locus.xml`: Contains the xml file for all samples in the pol locus data set.
 
-`integrase_gene.xml`: Contains the xml file for all the samples in the pol locus data set.
+`integrase_gene.xml`: Contains the xml file for all the samples in the integrase gene data set.
 
 `hiv_rate.xml`: Contains the xml file of all the time-stamped HIV samples used to infer HIV substitution rate.
 
