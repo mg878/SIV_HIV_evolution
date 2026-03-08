@@ -61,19 +61,11 @@ The study proceeds in four main steps:
 1. **Dataset assembly and alignment**  
    A full lentivirus alignment was assembled, including representative HIV, SIV, and pSIV sequences.
 
-2. **Temporal signal assessment**  
-   Each NRR was tested for temporal signal using **BETS**, comparing isochronous and heterochronous BEAST models via stepping-stone sampling.
+2. **Short-term rate estimation from HIV-1 group M**  
+   A time-stamped HIV-1 group M dataset was used to estimate short-term substitution rates for each non-recombinant region (NRR), providing the short-term rate scale used in downstream analyses.
 
-3. **Short-term rate estimation**  
-   HIV-1 group M was used as the best-characterised time-stamped dataset to estimate short-term substitution rates for each NRR.
+3. **Temporal signal assessment in the full HIV+SIV dataset**  
+   The HIV-derived short-term rates were then used to define weakly informative priors (with standard deviations inflated 2.5× relative to the HIV posterior for each NRR) for the full HIV+SIV dataset. For each NRR, temporal signal was assessed using **Bayesian Evaluation of Temporal Signal (BETS)** by comparing isochronous and heterochronous BEAST models via stepping-stone sampling.
 
 4. **PoW transformation**  
    For NRRs with sufficient temporal signal, ultrametric genetic-distance trees were transformed into **PoW time-scaled divergence trees** using the inferred short-term rate distributions.
-
----
-
-## Notes
-
-- The XML files provided here are those relevant to the analyses presented in the manuscript.
-- The PoW-transformed trees are provided only for NRRs that showed evidence of temporal signal and were used in the main dating analyses.
-- The repository is intended to support reproducibility of the principal results reported in the paper.
