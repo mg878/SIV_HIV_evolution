@@ -23,8 +23,9 @@ This repository contains the sequence alignments, BEAST XML files, phylogenetic 
 For each non-recombinant region (NRR), the repository contains two BEAST XML files:
 
 - **`NRR_*.xml`**  
-  BEAST XML files used to infer the **ultrametric genetic-distance trees** for each NRR under the HKY substitution model. These trees provide the input distance trees for the downstream PoW transformation.
-  These XML files correspond to the analyses used to generate the posterior tree files from which the PoW-transformed time-scaled divergence trees were constructed.
+  BEAST XML files used to infer the **ultrametric genetic-distance trees** for each NRR under the HKY substitution model. These trees provide the input distance trees for the downstream PoW transformation
+
+These XML files correspond to the analyses used to generate the posterior tree files from which the PoW-transformed time-scaled divergence trees were constructed.
 
 - **`NRR_*_dated_iso_v1.xml`**  
   Isochronous analysis for the relevant NRR.
