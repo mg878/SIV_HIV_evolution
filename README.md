@@ -22,13 +22,17 @@ This repository contains the sequence alignments, BEAST XML files, phylogenetic 
 
 For each non-recombinant region (NRR), the repository contains two BEAST XML files:
 
+- **`NRR_*.xml`**  
+  BEAST XML files used to infer the **ultrametric genetic-distance trees** for each NRR under the HKY substitution model. These trees provide the input distance trees for the downstream PoW transformation.
+  These XML files correspond to the analyses used to generate the posterior tree files from which the PoW-transformed time-scaled divergence trees were constructed.
+
 - **`NRR_*_dated_iso_v1.xml`**  
   Isochronous analysis for the relevant NRR.
 
 - **`NRR_*_dated_hetero_v1.xml`**  
   Heterochronous (tip-dated) analysis for the relevant NRR.
 
-These XMLs were used for **Bayesian Evaluation of Temporal Signal (BETS)** via stepping-stone sampling to compare isochronous and heterochronous models and assess temporal signal in each NRR.
+These two sets of XML files were used for **Bayesian Evaluation of Temporal Signal (BETS)** via stepping-stone sampling to compare isochronous and heterochronous models and assess temporal signal in each NRR.
 
 `*` denotes the NRR number.
 
@@ -67,5 +71,8 @@ The study proceeds in four main steps:
 3. **Temporal signal assessment in the full HIV+SIV dataset**  
    The HIV-derived short-term rates were then used to define weakly informative priors (with standard deviations inflated 2.5× relative to the HIV posterior for each NRR) for the full HIV+SIV dataset. For each NRR, temporal signal was assessed using **Bayesian Evaluation of Temporal Signal (BETS)** by comparing isochronous and heterochronous BEAST models via stepping-stone sampling.
 
-4. **PoW transformation**  
+4. **Ultrametric distance-tree inference**  
+   For each NRR, BEAST XML files (`NRR_*.xml`) were used to infer ultrametric genetic-distance trees under the HKY substitution model. These trees were used as input for the PoW transformation.
+
+5. **PoW transformation**  
    For NRRs with sufficient temporal signal, ultrametric genetic-distance trees were transformed into **PoW time-scaled divergence trees** using the inferred short-term rate distributions.
